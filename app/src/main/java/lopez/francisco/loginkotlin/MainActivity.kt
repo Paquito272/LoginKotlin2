@@ -19,17 +19,18 @@ class MainActivity : AppCompatActivity() {
             val user = etUser.text.toString()
             val pass = etPass.text.toString()
             val btnIngresar = btnIngresar
-            if (user.equals("paco") && pass.equals("123")){
+            if (user.equals("") && pass.equals("")){
+
+                toast("Verifica tu usuario y contraseña", Toast.LENGTH_SHORT)
+
+
+
+            }else {
 
                 toast("Binbenido Mortal", Toast.LENGTH_SHORT)
                 val i = Intent(applicationContext,  Activity2::class.java)
                 i.putExtra("nombre",etUser.text.trim().toString())
                 startActivity(i)
-
-            }else {
-
-
-                toast("Verifica tu usuario y contraseña", Toast.LENGTH_SHORT)
             }
         }
 
